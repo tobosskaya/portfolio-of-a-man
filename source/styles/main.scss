@@ -1,0 +1,61 @@
+@import 'header';
+@import 'footer';
+
+$default-color: green;
+
+body {
+    color: red;
+}
+
+p {
+    color: $default-color;
+}
+
+span {
+    color: $default-color;
+}
+
+.layout {
+    color: green;
+
+    .title {
+        color: red;
+    }
+}
+
+.general-layout {
+    padding: 50px;
+
+    &__title {
+        color: pink;
+    }    
+
+    &__subtitle {
+        color: black;
+    }
+}
+
+@mixin title($size) {
+    font-size: $size;
+    color: cadetblue;
+
+}
+
+.title {
+    @include title(16px);
+    font-family: 'Arial';
+    margin: 39px;
+}
+
+.subtitle {
+    @include title(14px);
+}
+
+.title_contacts {
+    @extend .title;
+    color: yellow;
+}
+
+.laypout {
+    width: 100vw - 300px;
+}
