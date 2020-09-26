@@ -1,5 +1,8 @@
 @import 'header';
 @import 'footer';
+
+$red: #fa5c65;
+
 body{
     margin: 0;
     padding: 0;
@@ -36,7 +39,7 @@ span{
     font-weight: 700;
     text-align: center;
     padding-top: 43px;
-    background-color: #fa5c65;
+    background-color: $red;
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 10%;
 }
@@ -77,13 +80,16 @@ span{
     font-weight: 700;
     width: 171px;
     height: 64px;
-    background-color: #fa5c65;
+    background-color: $red;
     border-radius: 10%;
 }
 .our-princeples__layout{
     display: flex;
     justify-content: space-between;
     padding-top: 50px;
+}
+.our-principles__explanation {
+    width: 28%;
 }
 .our-principles__title{
     font-size: 26px;
@@ -97,12 +103,13 @@ span{
     font-weight: 400;
     color: #9aa0ab;
     margin-bottom: 29px;
+
 }
 .more{ 
     display: flex;
 }
 .more__text{
-    color: #f0454c;
+    color: $red;
     font-size: 14px;
     font-weight: 400;
     padding-right: 5px;
@@ -196,4 +203,26 @@ span{
     font-family: "Open Sans";
     font-size: 13px;
     font-weight: 400;
+}
+@media (max-width: 1000px) {
+    .our-team__person {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .our-team__person-description {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .portfolio__layout{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 650px) {
+    .menu__main-menu{
+        margin-bottom: 30px;
+    }
 }
